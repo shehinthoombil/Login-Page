@@ -1,0 +1,33 @@
+
+<%-include('header')-%>
+
+<div class="login-page">
+        <div class="form">
+            <span>Log in for the existing user</span>
+            <%if(locals.logout){%>
+                <div class="alter alert-success text-center">
+                    <%=logout%>
+                </div>
+            <% }%>
+          <form class="register-form">
+            <!-- <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/> -->
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form" id="login-form" action="/route/login" method="POST">
+            <input type="text" autocomplete="off" placeholder="email" name="email" id="email" />
+            <input type="password" autocomplete="off" placeholder="password" name="password" id="password" />
+            <p id="errorDisplay"></p>
+            <button type="submit">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+    </div>
+
+
+    <%-include('footer')-%>
+
+
+
